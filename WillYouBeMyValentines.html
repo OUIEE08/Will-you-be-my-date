@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charSet="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="preload" as="image" href="https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif"/>
+        <title>Valentine &#x27;s Day Card</title>
+        <meta name="description" content="Will you be my valentine?"/>
+        <style>
+            .content {
+                max-width: max-content;
+                margin: auto;
+            }
+            buttonYes {
+                display: inline-block;
+                font-size: 16px;
+                font-weight: bold; 
+                color: black;
+                background-color: greenyellow;
+                border: 8px;
+                border-radius: 10px;
+                border-color: black;
+                padding: 20px;
+                margin: 10px;
+                width: 120px;
+                text-align: center;
+                box-shadow: 0 9px #999;
+            }
+            buttonYes:hover {
+                background-color: green;
+                color: white
+            }
+            buttonYes:active {
+                background-color: green;
+                box-shadow: 0 5px #666;
+                transform: translateY(4px);
+            }
+            buttonNo {
+                display: inline-block;
+                font-size: 16px; 
+                font-weight: bold; 
+                color: black;
+                background-color: red;
+                border: 8px;
+                border-radius: 10px;
+                border-color: black;
+                padding: 20px;
+                margin: 10px;
+                width: 120px; 
+                text-align: center;
+                box-shadow: 0 9px #999;
+            }
+            buttonNo:hover {
+                background-color: darkred;
+                color: white
+            }
+            buttonNo:active {
+                background-color: darkred;
+                box-shadow: 0 5px #666;
+                transform: translateY(4px);
+            }
+        </style>
+    </head>
+    <body class="content" >
+        <div style="margin: auto;">
+            <img style="height: 200px; align-content: center; margin: auto; display: block;" src="https://gifdb.com/images/high/cute-love-bear-roses-ou7zho5oosxnpo6k.gif"/>
+            <h1 id="header" class="text-4xl my-4 text-center" style="text-align: center;">Will you be my date on Friday?</h1>
+            <div id="div-button" style="position: relative;">
+                <buttonYes id="btnYes" class="btnYes">Yes</buttonYes>
+                <buttonNo id="btnNo" class="btnNo">No</buttonNo>
+            </div>
+        </div>
+        <script>
+             let btnYes = document.getElementById("btnYes");
+             let btnNo = document.getElementById("btnNo");
+
+             let currentHeight = 20;
+             let currentWidth = 120;
+             let currentFontSize = 16
+
+             btnYes.addEventListener("click", function(){
+                document.getElementById("div-button").style.visibility = "hidden";
+                document.getElementById("header").innerText = "It's a date 💗";
+             });
+
+             btnNo.addEventListener("click", function(){
+                currentHeight += 5;
+                currentWidth += 20;
+                currentFontSize += 4
+                btnYes.style.width = currentWidth + 'px';
+                btnYes.style.height = currentHeight + 'px';
+                btnYes.style.fontSize = currentFontSize + 'px';
+             })
+        </script>
+    </body>
+</html>
